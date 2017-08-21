@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>【サイトのタイトルを入れてね】</title>
-        <meta name="description" content="【サイトの説明文を入れてね】">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!--[if lt IE 9]>
@@ -27,10 +27,8 @@
         </style>
     </head>
     <body>
+        {{ content }}
     <div class="container" ng-controller="MainCtrl" ng-cloak> 
-        <h1>決定版！男のふんどし特集</h1>
-        <h2>男性用ふんどし</h2>
-
         <div class="row">
             <div ng-repeat="item in items" class="col-sm-6 col-md-3">
                  <div class="thumbnail">
