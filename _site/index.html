@@ -104,6 +104,7 @@
                 // APIをコールする
                 $http.jsonp(api, { params: params })
                 .success(function(result) {
+                    console.log result
                     $scope.items = result.Items;
                     $scope.totalItems = result.count;
                 });
